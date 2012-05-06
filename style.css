@@ -1069,6 +1069,7 @@ table {
     left: 0;
     right: 0;
     display: block !important;
+    z-index: 999;
     /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
   
   }
@@ -1087,11 +1088,11 @@ table {
     width: auto;
     float: left;
     clear: none;
-    margin-right: 1em;
+    margin-right: 0;
   }
   .menu-main-menu-container ul li:nth-child(2n) {
     float: left;
-    margin-right: 1em;
+    margin-right: 0;
   }
   .menu-main-menu-container ul.menu {
     position: relative;
