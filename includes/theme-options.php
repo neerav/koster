@@ -3,7 +3,7 @@
  * Properly enqueue styles and scripts for our theme options page.
  */
 function koster_admin_enqueue_scripts( $hook_suffix ) {
-	wp_enqueue_script( 'koster-theme-options', get_template_directory_uri() . '/includes/theme-options.js', array( 'farbtastic' ), '2011-06-10' );
+	wp_enqueue_script( 'koster-theme-options', get_template_directory_uri() . '/includes/js/theme-options.js', array( 'farbtastic' ), '2011-06-10' );
 	wp_enqueue_style( 'farbtastic' );
 }
 add_action( 'admin_print_styles-appearance_page_theme_options', 'koster_admin_enqueue_scripts' );
