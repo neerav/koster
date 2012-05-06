@@ -4,7 +4,7 @@ Theme URI: https://github.com/jameskoster/koster
 Description: A lightweight, responsive theme with a focus on typography.
 Author: James Koster
 Author URI: http://jameskoster.co.uk/
-Version: 1.0
+Version: 1.0.1
 Tags: white, two-columns, right-sidebar, flexible-width, post-formats, sticky-post, threaded-comments, translation-ready, theme-options
 
 License: GNU General Public License v2.0
@@ -1183,6 +1183,9 @@ table {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+  }
+  #content h1:first-child {
+    padding-top: 0;
   }
   #content.page {
     padding-left: 16.95%;

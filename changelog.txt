@@ -1,1 +1,4 @@
+[xx/xx/2012 - version 1.0.1]
+- Basic WooCommerce preperation
+
 [05/06/2012 - version 1.0]
