@@ -33,12 +33,7 @@
 			<?php } ?>
 			
 			
-			<aside class="threecol meta">
 			
-				<?php next_image_link(); ?>
-				<?php previous_image_link(); ?>
-			
-			</aside>
 			
 			<section class="article-content ninecol last">
 			
@@ -86,6 +81,13 @@
 				<?php comments_template( '', true ); ?>
 			
 			</section><!--/.article-content-->
+			
+			<aside class="threecol gallery-nav">
+			
+				<?php next_image_link(); ?>
+				<?php previous_image_link(); ?>
+			
+			</aside>
 			
 					
 		</article><!--/.row-->

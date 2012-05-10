@@ -442,6 +442,26 @@ img.wp-post-image {
 	content: "\e067";
 }
 
+/*--[ Gallery ]--------------------------------------------------------------------------------*/
+
+.gallery-nav {
+	.clearfix();
+	.borderbox;
+	a {
+		width:48%;
+		margin-right:3.8%;
+		display: block;
+		float: left;
+		&:nth-child(2n) {
+			margin-right:0;
+		}
+		img {
+			width:100%;
+			height: auto;
+		}
+	}
+}
+
 /*--[ Comments ]--------------------------------------------------------------------------------*/
 
 p.nocomments {
@@ -849,6 +869,8 @@ table {
 		background: lighten(@color1,3%);
 		padding:4.235em 5.6% 1.618em 0;
 		.border_radius(4px);
+		margin-left:-999em;
+		padding-left:999em;
 		
 		h1:first-child {
 			padding-top:0;
