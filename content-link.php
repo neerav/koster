@@ -9,5 +9,5 @@
 		$linkurl = $linktoend;
 		endif;
 	?>
-	<h1 class="title"><a href="<?php echo $linkurl; ?>" rel="external" title="<?php _e('Exernal link to', 'koster'); ?> <?php the_title(); ?>"><?php the_title(); ?> &rarr;</a></h1>
+	<h1 class="title"><a href="<?php echo $linkurl; ?>" rel="external" title="<?php _e('External link to', 'koster'); ?> <?php the_title(); ?>"><?php the_title(); ?> &rarr;</a></h1>
 </article>
