@@ -126,7 +126,7 @@ if ( ! isset( $content_width ) ) $content_width = 900;
 if ( ! function_exists( 'koster_post_meta' ) ) {
 	function koster_post_meta() { ?>
 		<ul>
-			<li class="date"><i><?php _e('Posted on', 'koster'); ?></i> <?php the_time('j F Y', '<time>', '</time>'); ?></li>
+			<li class="date"><i><?php _e('Posted on', 'koster'); ?></i> <?php the_time(get_option('date_format')); ?></li>
 			<li class="category"><i><?php _e('Posted in', 'koster'); ?></i> <?php the_category(', '); ?></li>
 			<li class="tags"><?php the_tags('<i>Tagged</i> ',', ',''); ?></li>
 			<li class="comment"><i><?php _e('Your thoughts', 'koster'); ?></i> <?php comments_popup_link( __( 'Leave a comment', 'koster' ), __( '1 Comment', 'koster' ), __( '% Comments', 'koster' ) ); ?></li>
