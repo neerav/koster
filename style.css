@@ -1230,6 +1230,10 @@ table {
     clear: both;
     text-align: center;
   }
+  .post.not-found,
+  .post.no-results {
+    margin-left: 25.85%;
+  }
   .archive_header {
     margin-left: 25.85%;
     margin-top: 1.618em;
