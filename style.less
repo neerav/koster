@@ -74,7 +74,7 @@ img,embed,object,video { max-width: 100%; }
 /*--[ Mobile Layout ]--------------------------------------------------------------------------------*/
 
 #wrapper {
-	padding:0 2em;
+	padding:0 1em;
 }
 
 /*--[ Anchors ]--------------------------------------------------------------------------------*/
@@ -245,6 +245,7 @@ form {
 
 #content {
 	padding:1.618em;
+	background: lighten(@color1,3%);
 }
 
 .menu-main-menu-container, .menu-main-navigation-container {
@@ -389,7 +390,7 @@ img.mugshot {
 img.alignleft {
 	max-width: none;
 	float: left;
-	margin:1.618em 1.618em 1.618em -25%;
+	margin:1.618em 1.618em 1.618em 0;
 }
 
 img.wp-post-image {
@@ -402,12 +403,12 @@ img.wp-post-image {
 
 .format-aside, .format-gallery, .format-link, .format-image, .format-quote, .format-status, .format-video, .format-audio, .format-chat, .format-standard {
 	h1.title {
-		text-indent: -1em;
 		&:before {
 			display: inline-block;
 			font-family: 'IconicFill';
 			width:1em;
 			color:rgba(0,0,0,0.25);
+			float: right;
 		}
 	}
 }
@@ -866,7 +867,6 @@ table {
 	#content {
 		float: left;
 		margin-right:0;
-		background: lighten(@color1,3%);
 		padding:4.235em 5.6% 1.618em 0;
 		.border_radius(4px);
 		margin-left:-999em;
@@ -882,6 +882,25 @@ table {
 		padding-right:5.6%;
 		width:48.65%;
 	}
+	
+	/*--[ Post Formats ]--------------------------------------------------------------------------------*/
+
+	.format-aside, .format-gallery, .format-link, .format-image, .format-quote, .format-status, .format-video, .format-audio, .format-chat, .format-standard {
+		h1.title {	
+			text-indent: -1em;
+			&:before {
+				float: none;
+			}
+		}
+	}
+	
+	/*--[ Images ]--------------------------------------------------------------------------------*/
+	
+	img.alignleft {
+		margin:1.618em 1.618em 1.618em -25%;
+	}
+	
+	/*--[ Sidebar ]--------------------------------------------------------------------------------*/
 	
 	#sidebar {
 		float: right;
@@ -900,6 +919,8 @@ table {
 			}
 		}
 	}
+	
+	/*--[ Footer ]--------------------------------------------------------------------------------*/
 	
 	#footer {
 		clear: both;

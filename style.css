@@ -309,7 +309,7 @@ video {
 }
 /*--[ Mobile Layout ]--------------------------------------------------------------------------------*/
 #wrapper {
-  padding: 0 2em;
+  padding: 0 1em;
 }
 /*--[ Anchors ]--------------------------------------------------------------------------------*/
 a {
@@ -544,6 +544,7 @@ form p:last-child {
 }
 #content {
   padding: 1.618em;
+  background: #f9fbfb;
 }
 .menu-main-menu-container,
 .menu-main-navigation-container {
@@ -730,7 +731,7 @@ img.mugshot {
 img.alignleft {
   max-width: none;
   float: left;
-  margin: 1.618em 1.618em 1.618em -25%;
+  margin: 1.618em 1.618em 1.618em 0;
 }
 img.wp-post-image {
   width: 100%;
@@ -738,18 +739,6 @@ img.wp-post-image {
   margin-bottom: 1.618em;
 }
 /*--[ Post Formats ]--------------------------------------------------------------------------------*/
-.format-aside h1.title,
-.format-gallery h1.title,
-.format-link h1.title,
-.format-image h1.title,
-.format-quote h1.title,
-.format-status h1.title,
-.format-video h1.title,
-.format-audio h1.title,
-.format-chat h1.title,
-.format-standard h1.title {
-  text-indent: -1em;
-}
 .format-aside h1.title:before,
 .format-gallery h1.title:before,
 .format-link h1.title:before,
@@ -764,6 +753,7 @@ img.wp-post-image {
   font-family: 'IconicFill';
   width: 1em;
   color: rgba(0, 0, 0, 0.25);
+  float: right;
 }
 .format-aside h1.title:before {
   content: "\e066";
@@ -1210,7 +1200,6 @@ table {
   #content {
     float: left;
     margin-right: 0;
-    background: #f9fbfb;
     padding: 4.235em 5.6% 1.618em 0;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -1226,6 +1215,36 @@ table {
     padding-right: 5.6%;
     width: 48.65%;
   }
+  /*--[ Post Formats ]--------------------------------------------------------------------------------*/
+  .format-aside h1.title,
+  .format-gallery h1.title,
+  .format-link h1.title,
+  .format-image h1.title,
+  .format-quote h1.title,
+  .format-status h1.title,
+  .format-video h1.title,
+  .format-audio h1.title,
+  .format-chat h1.title,
+  .format-standard h1.title {
+    text-indent: -1em;
+  }
+  .format-aside h1.title:before,
+  .format-gallery h1.title:before,
+  .format-link h1.title:before,
+  .format-image h1.title:before,
+  .format-quote h1.title:before,
+  .format-status h1.title:before,
+  .format-video h1.title:before,
+  .format-audio h1.title:before,
+  .format-chat h1.title:before,
+  .format-standard h1.title:before {
+    float: none;
+  }
+  /*--[ Images ]--------------------------------------------------------------------------------*/
+  img.alignleft {
+    margin: 1.618em 1.618em 1.618em -25%;
+  }
+  /*--[ Sidebar ]--------------------------------------------------------------------------------*/
   #sidebar {
     float: right;
     color: #999999;
@@ -1243,6 +1262,7 @@ table {
   #sidebar .widget:first-child h3 {
     padding-top: 0;
   }
+  /*--[ Footer ]--------------------------------------------------------------------------------*/
   #footer {
     clear: both;
     text-align: left;
