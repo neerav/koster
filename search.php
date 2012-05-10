@@ -8,7 +8,7 @@
     		<?php _e( 'Search results for', 'koster' ); ?> &ldquo; <?php the_search_query(); ?> &rdquo;
     	</h1>        
         		
-		<?php get_template_part( 'loop', 'index' );?>
+		<?php get_template_part( 'content', get_post_format() ); ?>
 	</section>
 	
 	<?php get_sidebar(); ?>

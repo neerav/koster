@@ -3,7 +3,7 @@
 <div class="row">
 
 	<section id="content" class="eightcol" role="main">
-		<?php get_template_part( 'loop', 'index' );?>
+		<?php get_template_part( 'content', get_post_format() ); ?>
 	</section>
 	
 	<?php get_sidebar(); ?>
