@@ -36,7 +36,7 @@ if ( ! function_exists( 'koster_background_color' ) ) {
 				article.post ol.commentlist li.bypostauthor .comment-author, .page ol.commentlist li.bypostauthor .comment-author {
 					background-color: <?php echo $koster_options['link_color']; ?>;
 				}
-				#content {
+				#content, .archive_header:after {
 					background-color: <?php echo $koster_options['content_background_color']; ?>;
 				}
 				@media only screen and (min-width: 768px) { 
