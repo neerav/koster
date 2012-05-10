@@ -1,31 +1,31 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Eleven
+ * @since Twenty Eleven 1.0
+ */
 
-<div class="row">
+get_header(); ?>
+	<div class="row">
+			<section id="content" class="eightcol" role="main">
 
-	<section id="content" class="eightcol page" role="main">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		
-		<section <?php post_class(); ?>>
-			<?php if ( is_front_page() ) { ?>
-			<h2><?php the_title(); ?></h2>
-			<?php } else { ?>	
-			<h1><?php the_title(); ?></h1>
-			<?php } ?>				
-			
-			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'koster' ), 'after' => '' ) ); ?>
-			<?php edit_post_link( __( 'Edit', 'koster' ), '', '' ); ?>
-		</section>
-		
-		<?php comments_template( '', true ); ?>
-		
-		<?php endwhile; ?>
+					<?php get_template_part( 'content', 'page' ); ?>
 
-	</section>
-	
-	<?php get_sidebar(); ?>
+					<?php comments_template( '', true ); ?>
 
-</div><!--/.row-->
+				<?php endwhile; // end of the loop. ?>
+
+			</section><!-- #content -->
+			<?php get_sidebar(); ?>
+	</div>
 
 <?php get_footer(); ?>

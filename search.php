@@ -16,6 +16,8 @@
 				<?php get_template_part( 'content', get_post_format() ); ?>
 
 			<?php endwhile; ?>
+			
+			<?php koster_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

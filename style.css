@@ -993,16 +993,16 @@ ul.koster-archive li .excerpt p:last-child {
   overflow: hidden;
   zoom: 1;
   padding-top: 1.75em;
-  padding-left: 5.9%;
 }
 .navigation .prev {
   width: 48%;
-  float: right;
-  text-align: right;
+  float: left;
+  text-align: left;
 }
 .navigation .next {
   width: 48%;
-  float: left;
+  float: right;
+  text-align: right;
 }
 /*--[ Tables ]--------------------------------------------------------------------------------*/
 table {
@@ -1343,7 +1343,6 @@ table {
   article.post .meta ul,
   article.attachment .meta ul {
     list-style: none;
-    padding-left: 13.45%;
   }
   article.post:last-child,
   article.attachment:last-child {
