@@ -315,6 +315,7 @@ video {
 a {
   color: #4d9d9f;
   text-decoration: none;
+  font-weight: bold;
 }
 a:hover,
 a:focus {
@@ -479,15 +480,11 @@ form textarea {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #ccc;
   font-family: inherit;
   font-size: 1em;
-  padding: .5em .65em;
+  padding: .618em 1em;
   outline: none;
-}
-form input[type=text]:focus,
-form textarea:focus {
-  border-color: #bbb;
+  border: 0;
 }
 form input[type=submit] {
   -webkit-box-sizing: border-box;
@@ -504,16 +501,15 @@ form input[type=submit] {
   border-radius: 3px;
   font-family: inherit;
   font-size: 1em;
-  padding: .5em .65em;
-  background: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
-  background: -webkit-linear-gradient(#ffffff, #dddddd);
-  background: -moz-linear-gradient(center top, #ffffff 0%, #dddddd 100%);
-  background: -moz-gradient(center top, #ffffff 0%, #dddddd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#dddddd);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff, endColorstr=#dddddd)";
-  border: 1px solid #ccc;
+  padding: .618em 1em;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
   cursor: pointer;
+  border: 0;
+  font-weight: bold;
+}
+form input[type=submit]:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 form p:last-child {
   margin-bottom: 0;
@@ -638,7 +634,7 @@ article.attachment h2:first-child,
 article.post .meta,
 article.attachment .meta,
 .type-page .meta {
-  color: rgba(187, 187, 187, 0.6);
+  color: rgba(0, 0, 0, 0.3);
   font-size: .734em;
   line-height: 2.38em;
   margin-top: .55em;
@@ -650,14 +646,12 @@ article.attachment .meta li,
   margin-left: 0;
   padding-left: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
   line-height: 1.618em;
   margin-bottom: 1.2em;
 }
 article.post .meta li i,
 article.attachment .meta li i,
 .type-page .meta li i {
-  color: rgba(187, 187, 187, 0.6);
   display: block;
   text-transform: none;
   letter-spacing: normal;
@@ -666,7 +660,10 @@ article.attachment .meta li i,
 article.post .meta li a,
 article.attachment .meta li a,
 .type-page .meta li a {
-  color: rgba(153, 153, 153, 0.6);
+  filter: alpha(opacity=@opacity * 100);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
 }
 article.post img,
 article.attachment img,
@@ -1086,10 +1083,6 @@ table {
     display: none;
   }
   .menu-main-menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     display: block !important;
     z-index: 999;
     /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
@@ -1097,7 +1090,6 @@ table {
   }
   .menu-main-menu-container ul {
     display: block;
-    margin: 0 12%;
     display: inline-block;
     display: block;
   }
@@ -1186,7 +1178,6 @@ table {
     background: none;
     margin-bottom: 0;
     padding-bottom: 0;
-    padding-top: 5em;
     margin-bottom: 1.618em;
   }
   #header .logo {
@@ -1247,20 +1238,17 @@ table {
   /*--[ Sidebar ]--------------------------------------------------------------------------------*/
   #sidebar {
     float: right;
-    color: #999999;
-    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.5);
     font-size: .8em;
-  }
-  #sidebar h1,
-  #sidebar h2,
-  #sidebar h3,
-  #sidebar h4,
-  #sidebar h5 {
-    font-family: sans-serif;
-    color: #777777;
   }
   #sidebar .widget:first-child h3 {
     padding-top: 0;
+  }
+  #sidebar a {
+    filter: alpha(opacity=@opacity * 100);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
   }
   /*--[ Footer ]--------------------------------------------------------------------------------*/
   #footer {
@@ -1378,8 +1366,5 @@ table {
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   #wrapper {
     max-width: 100%;
-  }
-  .menu-main-menu-container ul.menu {
-    margin: 0 4%;
   }
 }
