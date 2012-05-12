@@ -1,4 +1,10 @@
-[xx/xx/2012 - version 1.0.1]
-- Basic WooCommerce preperation
+[05/12/2012 - version 0.1.1]
+- basic WooCommerce preperation
+- date_format support
+- replaced loop.php with content.php
+- added content-page.php
+- added content-link.php
+- better support for link post format
+- couple of small fixes
 
-[05/06/2012 - version 1.0]
+[05/06/2012 - version 0.1]
