@@ -33,7 +33,7 @@
 
   <div id="wrapper">
   
-  		<nav>
+  		<nav class="main-nav">
   
 			<h3 class="nav-toggle"><a href="#"><?php _e('Navigation','koster'); ?></a></h3>
 			

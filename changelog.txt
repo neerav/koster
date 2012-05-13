@@ -1,3 +1,6 @@
+[05/13/2012 - version 0.1.2]
+- fixed main nav selector class
+
 [05/12/2012 - version 0.1.1]
 - basic WooCommerce preperation
 - date_format support
@@ -6,5 +9,6 @@
 - added content-link.php
 - better support for link post format
 - couple of small fixes
+- navigation no longer fixed (can break with some color choices)
 
 [05/06/2012 - version 0.1]

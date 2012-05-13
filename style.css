@@ -4,7 +4,7 @@ Theme URI: https://github.com/jameskoster/koster
 Description: A lightweight, responsive theme with a focus on typography.
 Author: James Koster
 Author URI: http://jameskoster.co.uk/
-Version: 0.1.1
+Version: 0.1.2
 Tags: white, two-columns, right-sidebar, flexible-width, post-formats, sticky-post, threaded-comments, translation-ready, theme-options
 
 License: GNU General Public License v2.0
@@ -542,52 +542,43 @@ form p:last-child {
   padding: 1.618em;
   background: #f9fbfb;
 }
-.menu-main-menu-container,
-.menu-main-navigation-container {
+.main-nav {
   display: inline-block;
   display: block;
   display: none;
 }
-.menu-main-menu-container:after,
-.menu-main-navigation-container:after {
+.main-nav:after {
   content: "";
   display: block;
   clear: both;
 }
-.menu-main-menu-container select,
-.menu-main-navigation-container select {
+.main-nav select {
   width: 100%;
   margin-bottom: 1.618em;
 }
-.menu-main-menu-container ul,
-.menu-main-navigation-container ul {
+.main-nav ul {
   list-style: none;
   margin: 0;
 }
-.menu-main-menu-container ul li,
-.menu-main-navigation-container ul li {
+.main-nav ul li {
   margin-right: 3.8%;
   width: 48%;
   float: left;
   clear: both;
 }
-.menu-main-menu-container ul li:nth-child(2n),
-.menu-main-navigation-container ul li:nth-child(2n) {
+.main-nav ul li:nth-child(2n) {
   float: right;
   clear: none;
   margin-right: 0;
 }
-.menu-main-menu-container ul li a,
-.menu-main-navigation-container ul li a {
+.main-nav ul li a {
   padding: .5em 0;
   display: inline-block;
 }
-.menu-main-menu-container ul ul,
-.menu-main-navigation-container ul ul {
+.main-nav ul ul {
   background: none;
 }
-.menu-main-menu-container ul ul li,
-.menu-main-navigation-container ul ul li {
+.main-nav ul ul li {
   width: 100%;
   padding-left: .618em;
   float: none !important;
@@ -1069,7 +1060,7 @@ table {
   html {
     -webkit-text-size-adjust: none;
   }
-  .admin-bar .menu-main-menu-container {
+  .admin-bar .main-nav {
     top: 28px;
   }
   #wrapper {
@@ -1082,33 +1073,33 @@ table {
   .nav-toggle {
     display: none;
   }
-  .menu-main-menu-container {
+  .main-nav {
     display: block !important;
     z-index: 999;
     /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
   
   }
-  .menu-main-menu-container ul {
+  .main-nav ul {
     display: block;
     display: inline-block;
     display: block;
   }
-  .menu-main-menu-container ul:after {
+  .main-nav ul:after {
     content: "";
     display: block;
     clear: both;
   }
-  .menu-main-menu-container ul li {
+  .main-nav ul li {
     width: auto;
     float: left;
     clear: none;
     margin-right: 0;
   }
-  .menu-main-menu-container ul li:nth-child(2n) {
+  .main-nav ul li:nth-child(2n) {
     float: left;
     margin-right: 0;
   }
-  .menu-main-menu-container ul.menu {
+  .main-nav ul.menu {
     position: relative;
     margin-bottom: 0;
     background: #f9fbfb;
@@ -1123,17 +1114,17 @@ table {
     /* LEVEL 3 */
   
   }
-  .menu-main-menu-container ul.menu li {
+  .main-nav ul.menu li {
     position: relative;
     float: left;
     zoom: 1;
     list-style: none;
   }
-  .menu-main-menu-container ul.menu li a {
+  .main-nav ul.menu li a {
     display: block;
     padding: .618em 1em;
   }
-  .menu-main-menu-container ul.menu ul {
+  .main-nav ul.menu ul {
     width: 15.379em;
     visibility: hidden;
     position: absolute;
@@ -1144,11 +1135,11 @@ table {
     background: #f9fbfb;
     padding: 0;
   }
-  .menu-main-menu-container ul.menu ul li {
+  .main-nav ul.menu ul li {
     float: none;
     padding-left: 0;
   }
-  .menu-main-menu-container ul.menu ul li a {
+  .main-nav ul.menu ul li a {
     width: 100%;
     display: block;
     -webkit-box-sizing: border-box;
@@ -1161,17 +1152,17 @@ table {
     /* Opera/IE 8+ */
   
   }
-  .menu-main-menu-container ul.menu ul li a:after {
+  .main-nav ul.menu ul li a:after {
     content: "" !important;
   }
-  .menu-main-menu-container ul.menu ul ul {
+  .main-nav ul.menu ul ul {
     left: 100%;
     top: 0;
   }
-  .menu-main-menu-container ul.menu ul ul li a:after {
+  .main-nav ul.menu ul ul li a:after {
     display: none !important;
   }
-  .menu-main-menu-container ul.menu li:hover > ul {
+  .main-nav ul.menu li:hover > ul {
     visibility: visible;
   }
   #header {
