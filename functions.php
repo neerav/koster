@@ -130,7 +130,7 @@ if ( ! function_exists( 'koster_post_meta' ) ) {
 			<li class="category"><i><?php _e('Posted in', 'koster'); ?></i> <?php the_category(', '); ?></li>
 			<li class="tags"><?php the_tags('<i>Tagged</i> ',', ',''); ?></li>
 			<li class="comment"><i><?php _e('Your thoughts', 'koster'); ?></i> <?php comments_popup_link( __( 'Leave a comment', 'koster' ), __( '1 Comment', 'koster' ), __( '% Comments', 'koster' ) ); ?></li>
-			<li class="permalink"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'koster' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><i><?php _e('Permalink','koster'); ?></i></a></li>
+			<li class="permalink"><i><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'koster' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php _e('Permalink','koster'); ?></a></i></li>
 		</ul>
 	<?php }
 }
