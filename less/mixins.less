@@ -137,3 +137,12 @@
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
+.rotate(@degree:1deg) {
+	-webkit-transform: rotate(@degree);  /* Saf3.1+, Chrome */
+	-moz-transform: rotate(@degree);  /* FF3.5+ */
+	-ms-transform: rotate(@degree);  /* IE9 */
+	-o-transform: rotate(@degree);  /* Opera 10.5 */ 
+	transform: rotate(@degree);
+	zoom: 1;
+}
