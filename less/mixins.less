@@ -146,3 +146,12 @@
 	transform: rotate(@degree);
 	zoom: 1;
 }
+
+.scale(@scale:1deg) {
+	-webkit-transform: scale(@scale);  /* Saf3.1+, Chrome */
+	-moz-transform: scale(@scale);  /* FF3.5+ */
+	-ms-transform: scale(@scale);  /* IE9 */
+	-o-transform: scale(@scale);  /* Opera 10.5 */ 
+	transform: scale(@scale);
+	zoom: 1;
+}
