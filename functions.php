@@ -112,7 +112,6 @@ register_sidebar(array(
 /* Prepare featured images for mobile which are served conditionally (big props to http://viewportindustries.com/blog/automatic-responsive-images-in-wordpress/) */
 /*----------------------*/
 add_image_size('thumbnail-bw', 400, 0, false);
-add_filter('wp_generate_attachment_metadata','bw_images_filter');
 
 /*----------------------*/
 /* Define content width */
