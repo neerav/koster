@@ -636,6 +636,7 @@ article.attachment .meta,
   font-size: .734em;
   line-height: 2.38em;
   margin-top: .55em;
+  font-family: sans-serif;
 }
 article.post .meta li,
 article.attachment .meta li,
