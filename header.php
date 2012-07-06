@@ -11,7 +11,7 @@
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><?php wp_title(); ?> </title> 
+  <title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title> 
   <meta name="description" content="<?php get_bloginfo ( 'description' );  ?>">
   <meta name="author" content="James Koster">
 
@@ -51,14 +51,6 @@
 
   <div id="wrapper">
   
-  		<nav class="main-nav">
-  
-			<h3 class="nav-toggle"><a href="#"><?php _e('Navigation','koster'); ?></a></h3>
-			
-			<?php wp_nav_menu( 'main' ); ?>
-		
-		</nav>
-  
 		<header id="header" class="row visible">
 			
 			
@@ -66,13 +58,21 @@
 			
 			<?php if ( is_home() ) { ?>
 			
-			    <h1 class="tencol site-title last"><?php bloginfo('name'); ?></h1>
+			    <h1 class="fourcol site-title"><?php bloginfo('name'); ?></h1>
 				
 			<?php } else { ?>
 			    
-			    <a href="<?php echo home_url(); ?>" class="tencol site-title last"><?php bloginfo('name'); ?></a>
+			    <a href="<?php echo home_url(); ?>" class="fourcol site-title "><?php bloginfo('name'); ?></a>
 			    
 			<?php } ?>
+			
+			<h3 class="nav-toggle"><a href="#"><?php _e('Navigation','koster'); ?></a></h3>
+			
+			<nav class="main-nav sixcol last">
+  
+				<?php wp_nav_menu( 'main' ); ?>
+			
+			</nav>
 		
 		</header>
   

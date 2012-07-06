@@ -215,6 +215,7 @@ form {
 /*--[ Layout ]--------------------------------------------------------------------------------*/
 
 .nav-toggle {
+	padding:0;
 	a {
 		display: block;
 		&:after {
@@ -229,6 +230,8 @@ form {
 	margin-bottom:0;
 	padding-bottom:1.618em;
 	margin-bottom:1.618em;
+	padding:1.618em;
+	border-bottom:4px double @color1;
 	
 	.site-title {
 		padding-bottom:0;
@@ -252,6 +255,7 @@ form {
 .main-nav {
 	.clearfix();
 	display: none;
+	font-family: @fontstack1;
 	select {
 		width:100%;
 		margin-bottom:1.618em;
@@ -350,12 +354,14 @@ article.post, article.attachment, .type-page {
 
 #sidebar {
 	margin-bottom:1.75em;
+	padding:1.618em;
 }
 
 #footer {
 	padding-top:3em;
 	padding-bottom:1.75em;
 	text-align: center;
+	border-top:4px double @color1;
 }
 
 /*--[ Images ]--------------------------------------------------------------------------------*/
@@ -655,6 +661,8 @@ table {
 		line-height: 1.618em;
 		margin:2.992em;
 		background: #fff;
+		border-top:3px solid @color2;
+		.box_shadow(0,0,2.618em,0,rgba(0,0,0,0.1));
 	}
 
 	/* Let's make a grid */
@@ -739,9 +747,7 @@ table {
 	
 	// Styles applied when admin bar is present
 	.admin-bar {
-		.main-nav {
-			top:28px;
-		}
+
 	}
 	
 	#wrapper {
@@ -759,17 +765,29 @@ table {
 	.main-nav {
 		display: block !important;
 		z-index: 999;
+		padding-top:5.1em;
 		ul {
 			display: block;
 			.clearfix();
+			float: right;
+			border:4px double @color1;
+			border-width:4px 0 4px 0;
 			li {
 				width:auto;
 				float: left;
 				clear: none;
 				margin-right:0;
+				a {
+					border-right:1px solid @color1;
+				}
 				&:nth-child(2n) {
 					float: left;
 					margin-right:0;
+				}
+				&:last-child {
+					a {
+						border-right:0;
+					}
 				}
 			}
 		}
@@ -778,8 +796,6 @@ table {
 		ul.menu {
 			position: relative;
 			margin-bottom:0;
-			background: @color1;
-			.border_radius_bottom(4px);
 			li {
 				position: relative;
 				float: left;
@@ -799,11 +815,12 @@ table {
 				visibility: hidden;
 				position: absolute;
 				top:100%;
-				left: 0;
+				left: -1px;
 				z-index: 9999;
 				margin:0;
-				background: @color1;
+				background: #fff;
 				padding:0;
+				border-width:4px 1px;
 				li {
 					float: none;
 					padding-left:0;
@@ -811,6 +828,7 @@ table {
 						width: 100%;
 						//display: inline-block;
 						display: block;
+						border:0;
 						.borderbox();
 						&:after {
 							content: "" !important;
@@ -846,9 +864,8 @@ table {
 	#header {
 		background: none;
 		margin-bottom:0;
-		padding-bottom:0;
-		border-bottom:4px double @color1;
 		margin-bottom:2.992em;
+		padding:2.992em 0 0 0;
 		
 		.logo {
 			margin-top:2em;
@@ -899,6 +916,7 @@ table {
 		float: right;
 		color:rgba(0,0,0,0.5);
 		font-size:.8em;
+		padding:0;
 		
 		.widget:first-child {
 			h3 {
@@ -916,7 +934,6 @@ table {
 	#footer {
 		clear: both;
 		text-align: left;
-		border-top:4px double @color1;
 		
 		hr {
 			clear: both;
@@ -1024,7 +1041,10 @@ table {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) { 
+	body {
+		margin:1em;
+	}
 	#wrapper {
-		max-width:80%;
+		max-width:87%;
 	}
 }

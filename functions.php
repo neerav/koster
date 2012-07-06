@@ -21,8 +21,11 @@ if ( ! function_exists( 'koster_background_color' ) ) {
 		$koster_options = get_option('koster_theme_options');
 		?>
 			<style type="text/css" media="screen">
-				html, form, .main-nav ul.menu, .main-nav ul.menu ul {
+				html, form {
 					background:<?php echo $koster_options['background_color']; ?>;
+				}
+				body {
+					border-top-color:<?php echo $koster_options['link_color']; ?>
 				}
 				#header {
 					border-bottom-color:<?php echo $koster_options['background_color']; ?>;
@@ -47,7 +50,7 @@ if ( ! function_exists( 'koster_background_color' ) ) {
 				}
 				@media only screen and (min-width: 768px) { 
 					.menu-main-menu-container ul.menu, .menu-main-menu-container ul.menu ul {
-						background-color: <?php echo $koster_options['background_color']; ?>;
+						border-color:<?php echo $koster_options['background_color']; ?>;
 					}
 				}
 			</style>

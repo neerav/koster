@@ -516,6 +516,9 @@ form p:last-child {
   margin-bottom: 0;
 }
 /*--[ Layout ]--------------------------------------------------------------------------------*/
+.nav-toggle {
+  padding: 0;
+}
 .nav-toggle a {
   display: block;
 }
@@ -528,6 +531,8 @@ form p:last-child {
   margin-bottom: 0;
   padding-bottom: 1.618em;
   margin-bottom: 1.618em;
+  padding: 1.618em;
+  border-bottom: 4px double #f0f5f5;
 }
 #header .site-title {
   padding-bottom: 0;
@@ -546,6 +551,7 @@ form p:last-child {
   display: inline-block;
   display: block;
   display: none;
+  font-family: sans-serif;
 }
 .main-nav:after {
   content: "";
@@ -685,11 +691,13 @@ article.attachment ol li ol,
 }
 #sidebar {
   margin-bottom: 1.75em;
+  padding: 1.618em;
 }
 #footer {
   padding-top: 3em;
   padding-bottom: 1.75em;
   text-align: center;
+  border-top: 4px double #f0f5f5;
 }
 /*--[ Images ]--------------------------------------------------------------------------------*/
 img.mugshot {
@@ -993,6 +1001,11 @@ table {
     line-height: 1.618em;
     margin: 2.992em;
     background: #fff;
+    border-top: 3px solid #4d9d9f;
+    box-shadow: 0 0 2.618em 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 2.618em 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 2.618em 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 0 2.618em 0 rgba(0, 0, 0, 0.1);
   }
   /* Let's make a grid */
   .onecol,
@@ -1062,9 +1075,6 @@ table {
   html {
     -webkit-text-size-adjust: none;
   }
-  .admin-bar .main-nav {
-    top: 28px;
-  }
   #wrapper {
     max-width: 76%;
     margin: 0 auto;
@@ -1078,6 +1088,7 @@ table {
   .main-nav {
     display: block !important;
     z-index: 999;
+    padding-top: 5.1em;
     /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
   
   }
@@ -1085,6 +1096,9 @@ table {
     display: block;
     display: inline-block;
     display: block;
+    float: right;
+    border: 4px double #f0f5f5;
+    border-width: 4px 0 4px 0;
   }
   .main-nav ul:after {
     content: "";
@@ -1097,20 +1111,19 @@ table {
     clear: none;
     margin-right: 0;
   }
+  .main-nav ul li a {
+    border-right: 1px solid #f0f5f5;
+  }
   .main-nav ul li:nth-child(2n) {
     float: left;
     margin-right: 0;
   }
+  .main-nav ul li:last-child a {
+    border-right: 0;
+  }
   .main-nav ul.menu {
     position: relative;
     margin-bottom: 0;
-    background: #f0f5f5;
-    -webkit-border-bottom-left-radius: 4px;
-    -webkit-border-bottom-right-radius: 4px;
-    -moz-border-radius-bottomleft: 4px;
-    -moz-border-radius-bottomright: 4px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
     /* LEVEL 2 */
   
     /* LEVEL 3 */
@@ -1131,11 +1144,12 @@ table {
     visibility: hidden;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -1px;
     z-index: 9999;
     margin: 0;
-    background: #f0f5f5;
+    background: #fff;
     padding: 0;
+    border-width: 4px 1px;
   }
   .main-nav ul.menu ul li {
     float: none;
@@ -1144,6 +1158,7 @@ table {
   .main-nav ul.menu ul li a {
     width: 100%;
     display: block;
+    border: 0;
     -webkit-box-sizing: border-box;
     /* Safari/Chrome, other WebKit */
   
@@ -1170,9 +1185,8 @@ table {
   #header {
     background: none;
     margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: 4px double #f0f5f5;
     margin-bottom: 2.992em;
+    padding: 2.992em 0 0 0;
   }
   #header .logo {
     margin-top: 2em;
@@ -1229,6 +1243,7 @@ table {
     float: right;
     color: rgba(0, 0, 0, 0.5);
     font-size: .8em;
+    padding: 0;
   }
   #sidebar .widget:first-child h3 {
     padding-top: 0;
@@ -1243,7 +1258,6 @@ table {
   #footer {
     clear: both;
     text-align: left;
-    border-top: 4px double #f0f5f5;
   }
   #footer hr {
     clear: both;
@@ -1354,7 +1368,10 @@ table {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
+  body {
+    margin: 1em;
+  }
   #wrapper {
-    max-width: 80%;
+    max-width: 87%;
   }
 }
