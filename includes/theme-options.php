@@ -138,6 +138,18 @@ function theme_options_do_page() {
 					</td>
 				</tr>
 				
+				<?php
+				/**
+				 * Analytics property ID
+				 */
+				?>
+				<tr valign="top"><th scope="row"><?php _e( 'Analytics Property ID', 'koster' ); ?></th>
+					<td>
+						<input id="koster_theme_options[analytics_id]" class="regular-text" type="text" name="koster_theme_options[analytics_id]" value="<?php esc_attr_e( $options['analytics_id'] ); ?>" placeholder="UA-XXXXXXXX-X" />
+						<label class="description" for="koster_theme_options[analytics_id]"><?php _e( 'The URL to your logo file', 'koster' ); ?></label>
+					</td>
+				</tr>
+				
 			</table>
 
 			<p class="submit">
@@ -158,7 +170,8 @@ function koster_get_default_options() {
           'text_color' => '#444',
           'text_color' => '#333',
           'content_background_color' => '#fff',
-          'logo_url' => 'http://www.gravatar.com/avatar/babdd787a9577a0e615246ac79cf2826?s=256&d=identicon&r=PG'
+          'logo_url' => 'http://www.gravatar.com/avatar/babdd787a9577a0e615246ac79cf2826?s=256&d=identicon&r=PG',
+          'analytics_id' => 'UA-XXXXXXXX-X',
      );
      return $koster_options;
 }
@@ -185,6 +198,7 @@ function theme_options_validate( $input ) {
 	$input['text_color'] = wp_filter_nohtml_kses( $input['text_color'] );
 	$input['heading_color'] = wp_filter_nohtml_kses( $input['heading_color'] );
 	$input['link_color'] = wp_filter_nohtml_kses( $input['link_color'] );
+	$input['analytics_id'] = wp_filter_nohtml_kses( $input['analytics_id'] );
 	
 	return $input;
 }

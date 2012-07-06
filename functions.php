@@ -21,8 +21,14 @@ if ( ! function_exists( 'koster_background_color' ) ) {
 		$koster_options = get_option('koster_theme_options');
 		?>
 			<style type="text/css" media="screen">
-				body, form {
+				html, form, .main-nav ul.menu, .main-nav ul.menu ul {
 					background:<?php echo $koster_options['background_color']; ?>;
+				}
+				#header {
+					border-bottom-color:<?php echo $koster_options['background_color']; ?>;
+				}
+				#footer {
+					border-top-color:<?php echo $koster_options['background_color']; ?>;
 				}
 				body, #sidebar {
 					color: <?php echo $koster_options['text_color']; ?>;
@@ -36,12 +42,12 @@ if ( ! function_exists( 'koster_background_color' ) ) {
 				article.post ol.commentlist li.bypostauthor .comment-author, .page ol.commentlist li.bypostauthor .comment-author {
 					background-color: <?php echo $koster_options['link_color']; ?>;
 				}
-				#content, .archive_header:after {
+				body, .archive_header:after {
 					background-color: <?php echo $koster_options['content_background_color']; ?>;
 				}
 				@media only screen and (min-width: 768px) { 
 					.menu-main-menu-container ul.menu, .menu-main-menu-container ul.menu ul {
-						background-color: <?php echo $koster_options['content_background_color']; ?>;
+						background-color: <?php echo $koster_options['background_color']; ?>;
 					}
 				}
 			</style>
