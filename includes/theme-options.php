@@ -146,7 +146,7 @@ function theme_options_do_page() {
 				<tr valign="top"><th scope="row"><?php _e( 'Analytics Property ID', 'koster' ); ?></th>
 					<td>
 						<input id="koster_theme_options[analytics_id]" class="regular-text" type="text" name="koster_theme_options[analytics_id]" value="<?php esc_attr_e( $options['analytics_id'] ); ?>" placeholder="UA-XXXXXXXX-X" />
-						<label class="description" for="koster_theme_options[analytics_id]"><?php _e( 'The URL to your logo file', 'koster' ); ?></label>
+						<label class="description" for="koster_theme_options[analytics_id]"><?php _e( 'Your Google Analytics property ID', 'koster' ); ?></label>
 					</td>
 				</tr>
 				
