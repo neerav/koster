@@ -2,6 +2,7 @@
 - changed the design a little
 - added analytics property id option to theme options
 - moved textarea in comment form above other inputs
+- some mobile tweaks and fixes
 
 [05/13/2012 - version 0.1.2]
 - fixed main nav selector class

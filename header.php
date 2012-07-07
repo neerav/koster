@@ -49,7 +49,7 @@
 
 <body <?php body_class(); ?>>
 
-  <div id="wrapper">
+  <div id="wrapper" class="<?php if (!is_home()) echo 'not-home'; ?>">
   
 		<header id="header" class="row visible">
 			

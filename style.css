@@ -344,6 +344,7 @@ body {
   line-height: 1.921em;
   overflow-x: hidden;
   color: #444444;
+  background: #fff;
 }
 h1,
 h2,
@@ -545,6 +546,9 @@ form p:last-child {
   width: 100%;
   margin-bottom: 1.618em;
 }
+.not-home #header .logo {
+  display: none;
+}
 #content {
   padding: 1.618em;
 }
@@ -606,11 +610,6 @@ article.attachment:after,
   display: block;
   clear: both;
 }
-article.post .article-content .meta,
-article.attachment .article-content .meta,
-.type-page .article-content .meta {
-  display: none;
-}
 article.post img,
 article.attachment img,
 .type-page img {
@@ -637,6 +636,7 @@ article.attachment .meta,
   line-height: 2.38em;
   margin-top: .55em;
   font-family: sans-serif;
+  display: none;
 }
 article.post .meta li,
 article.attachment .meta li,
@@ -1198,6 +1198,9 @@ table {
     font-weight: 300;
     padding-top: 2.618em;
   }
+  .not-home #header .logo {
+    display: block;
+  }
   #content {
     float: left;
     margin-right: 0;
@@ -1324,42 +1327,49 @@ table {
     content: "\e074";
   }
   article.post h1.title,
-  article.attachment h1.title {
+  article.attachment h1.title,
+  .type-page h1.title {
     padding-left: 25.85%;
     letter-spacing: -2px;
   }
   article.post .article-content,
-  article.attachment .article-content {
+  article.attachment .article-content,
+  .type-page .article-content {
     float: right;
   }
   article.post .article-content h1:first-child,
-  article.attachment .article-content h1:first-child {
+  article.attachment .article-content h1:first-child,
+  .type-page .article-content h1:first-child {
     padding-top: 0;
   }
   article.post .article-content h1 + h2,
   article.attachment .article-content h1 + h2,
+  .type-page .article-content h1 + h2,
   article.post .article-content h2 + h3,
   article.attachment .article-content h2 + h3,
+  .type-page .article-content h2 + h3,
   article.post .article-content h3 + h4,
   article.attachment .article-content h3 + h4,
+  .type-page .article-content h3 + h4,
   article.post .article-content h4 + h5,
-  article.attachment .article-content h4 + h5 {
+  article.attachment .article-content h4 + h5,
+  .type-page .article-content h4 + h5 {
     padding-top: 0;
   }
-  article.post .article-content .meta,
-  article.attachment .article-content .meta {
+  article.post .meta,
+  article.attachment .meta,
+  .type-page .meta {
+    text-align: right;
     display: block;
   }
-  article.post .meta,
-  article.attachment .meta {
-    text-align: right;
-  }
   article.post .meta ul,
-  article.attachment .meta ul {
+  article.attachment .meta ul,
+  .type-page .meta ul {
     list-style: none;
   }
   article.post:last-child,
-  article.attachment:last-child {
+  article.attachment:last-child,
+  .type-page:last-child {
     background: none;
   }
   img.featured-image {
