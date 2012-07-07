@@ -49,7 +49,7 @@ if ( ! function_exists( 'koster_background_color' ) ) {
 					background-color: <?php echo $koster_options['content_background_color']; ?>;
 				}
 				@media only screen and (min-width: 768px) { 
-					.menu-main-menu-container ul.menu, .menu-main-menu-container ul.menu ul {
+					.menu-main-menu-container ul.menu, .menu-main-menu-container ul.menu ul, .main-nav ul li a {
 						border-color:<?php echo $koster_options['background_color']; ?>;
 					}
 				}
@@ -160,7 +160,26 @@ function koster_content_nav( $nav_id ) {
 		</nav><!-- #nav-above -->
 	<?php endif;
 }
-endif; 
+endif;
+
+/*----------------------*/
+/* Move text area in comment form above inputs */
+/*----------------------*/
+add_action( 'comment_form_defaults', 'koster_move_textarea' );
+add_action( 'comment_form_top', 'koster_move_textarea' );
+function koster_move_textarea( $input = array () ) {
+    static $textarea = '';
+
+    if ( 'comment_form_defaults' === current_filter() ) {
+        // Copy the field to our internal variable …
+        $textarea = $input['comment_field'];
+        // … and remove it from the defaults array.
+        $input['comment_field'] = '';
+        return $input;
+    }
+
+    print $textarea;
+} 
 
 /*----------------------*/
 /* WooCommerce */
